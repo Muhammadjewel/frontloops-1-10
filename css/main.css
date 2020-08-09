@@ -29,10 +29,134 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
+}
+.cf::after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+@supports (display: flex) {
+  .cf::before,
+  .cf::after {
+    display: none;
+  }
+}
 .container {
   max-width: 1160px;
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
 }
-
+/* SITE-HEADER */
+.site-header {
+  padding-top: 30px;
+}
+/* LOGO */
+.logo {
+  float: left;
+}
+.logo:hover {
+  opacity: 0.8;
+}
+.logo:focus {
+  opacity: 0.4;
+}
+.logo-img {
+  display: block;
+}
+/* SITE-HEADER-RIGHT */
+.site-header-right {
+  float: right;
+  margin-top: 10px;
+}
+/* SITENAV */
+.sitenav {
+  float: left;
+  margin-right: 30px;
+  margin-top: 2px;
+}
+.sitenav-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sitenav-item {
+  float: left;
+  margin-left: 30px;
+}
+.sitenav-link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-decoration: none;
+  color: #888;
+}
+.sitenav-link:hover {
+  color: #222;
+}
+.sitenav-link::after {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  content: "";
+  transition: background-color 0.3s ease;
+}
+.sitenav-link:hover::after {
+  background-color: #222;
+}
+/* HEADER-SEARCH-FORM */
+.header-search-form {
+  float: left;
+}
+.header-search-input {
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.header-search-input:focus {
+  outline: none;
+  background-color: #efefef;
+}
+@supports (display: flex) {
+  .site-header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    float: none;
+  }
+  .site-header-right {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0;
+  }
+  .sitenav {
+    float: none;
+    margin-top: 0;
+  }
+  .sitenav-list {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .sitenav-item {
+    float: none;
+  }
+  .header-search-form {
+    float: none;
+  }
+}

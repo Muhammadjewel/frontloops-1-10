@@ -11,24 +11,26 @@
 </head>
 <body>
   
-  <header>
-    <div class="container">
-      <a href="index.html">
-        <img src="img/logo.svg" alt="Apple company logo" width="20" height="44">
+  <header class="site-header">
+    <div class="container site-header-container cf">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="img/logo.svg" alt="Apple company logo" width="20" height="44">
       </a>
 
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="offers.html">Offers</a></li>
-          <li><a href="services.html">Services</a></li>
-        </ul>
-      </nav>
-
-      <form action="https://echo.htmlacademy.ru" method="GET">
-        <label class="visually-hidden" for="header-search-input">Search</label>
-        <input type="search" id="header-search-input" name="search" placeholder="How can we help you?" required>
-      </form>
+      <div class="site-header-right cf">
+        <nav class="sitenav">
+          <ul class="sitenav-list cf">
+            <li class="sitenav-item"><a class="sitenav-link" href="about.html">About</a></li>
+            <li class="sitenav-item"><a class="sitenav-link" href="offers.html">Offers</a></li>
+            <li class="sitenav-item"><a class="sitenav-link" href="services.html">Services</a></li>
+          </ul>
+        </nav>
+  
+        <form class="header-search-form" action="https://echo.htmlacademy.ru" method="GET">
+          <label class="visually-hidden" for="header-search-input">Search</label>
+          <input class="header-search-input" type="search" id="header-search-input" name="search" placeholder="How can we help you?" required>
+        </form>
+      </div>
     </div>
   </header>
 
