@@ -55,6 +55,7 @@ img {
 /* BUTTON */
 .button {
   display: inline-block;
+  border: none;
   padding: 10px 30px;
   background-color: #f06a52;
   color: #fff;
@@ -206,12 +207,20 @@ img {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 2.5rem;
+  line-height: 1.2;
+}
+.section-title-white {
+  color: #fff;
 }
 .section-text {
   padding-left: 30px;
   border-left: 2px solid #666;
   margin-bottom: 25px;
   color: #888;
+}
+.section-text-white {
+  border-left-color: #fff;
+  color: #fff;
 }
 /* FREEDOM */
 .freedom {
@@ -257,4 +266,43 @@ img {
   .feature {
     float: none;
   }
+}
+/* CTA */
+.cta {
+  padding: 40px 0;
+}
+.cta-section-inner {
+  float: left;
+  margin-top: 200px;
+}
+.cta-image {
+  float: right;
+  width: 500px;
+}
+@supports (display: flex) {
+  .cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cta-section-inner,
+  .cta-image {
+    float: none;
+  }
+  .cta-section-inner {
+    margin-top: 0;
+  }
+}
+/* RUNNERS */
+.runners {
+  padding: 200px 0;
+  background-image: url("../img/runners.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.runners-inner {
+  margin-left: auto;
 }
